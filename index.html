@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/papercss@1.9.2/dist/paper.min.css"
+      />
+    <style>
+.option {
+  font-size: 50px;
+}
+
+    </style>
+  </head>
+  <body>
+    <div class="container paper">
+    <h1>Should Lash pick up?</h1>
+    <div class="option-container margin-large">
+      <button class="paper-btn option yes margin-large">Yes</button>
+      <button class="paper-btn option no margin-large">No</button>
+      <p class='text-danger'>Avi and the devil think so too</p>
+      <p class="message"></p>
+    </div>
+    </div>
+    <script>
+      let container = document.querySelector('.option-container')
+document.querySelector('.no').addEventListener('mouseover', function(e) {
+  document.querySelector('.message').textContent = 'huhahahahahhahhahahahahahahahhahahah'
+  let yes = document.querySelector('.yes')
+  let no = document.querySelector('.no')
+  if (yes.nextElementSibling.tagName == "P") {
+    container.insertBefore(yes, no)
+  } else {
+    container.insertBefore(no, yes)
+  }
+})
+    </script>
+  </body>
+</html>
